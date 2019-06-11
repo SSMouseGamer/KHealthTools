@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		139CC2CE1C87ECC8161520EF /* Pods_KHealthTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BC6713DEC3030163398D66 /* Pods_KHealthTools.framework */; };
+		F40DADDD22AFE7DE004F8481 /* DaBao.py in Resources */ = {isa = PBXBuildFile; fileRef = F40DADDC22AFE7DE004F8481 /* DaBao.py */; };
 		F440D11B211AF86D004174A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D11A211AF86D004174A6 /* AppDelegate.m */; };
 		F44B8EA9211B0264006BB100 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B8EA8211B0264006BB100 /* ViewController.m */; };
 		F4576743224CA3E9000492BC /* KHQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4576742224CA3E9000492BC /* KHQueue.m */; };
@@ -29,6 +30,7 @@
 		8B8350DE130AAE09E75AB08C /* Pods-KHealthTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHealthTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KHealthTools/Pods-KHealthTools.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BC6713DEC3030163398D66 /* Pods_KHealthTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KHealthTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D728D38E593B1BB566B0BB48 /* Pods-KHealthTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHealthTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-KHealthTools/Pods-KHealthTools.release.xcconfig"; sourceTree = "<group>"; };
+		F40DADDC22AFE7DE004F8481 /* DaBao.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = DaBao.py; sourceTree = "<group>"; };
 		F440D116211AF86D004174A6 /* KHealthTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHealthTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F440D119211AF86D004174A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F440D11A211AF86D004174A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				F48067C122AF434F00C78471 /* Assets.xcassets */,
 				F48067C422AF434F00C78471 /* LaunchScreen.storyboard */,
 				F48067C022AF434F00C78471 /* locationDebug.gpx */,
+				F40DADDC22AFE7DE004F8481 /* DaBao.py */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				F48067CA22AF434F00C78471 /* LaunchScreen.storyboard in Resources */,
 				F48067C622AF434F00C78471 /* locationDebug.gpx in Resources */,
 				F48067C922AF434F00C78471 /* khts_navi_config.plist in Resources */,
+				F40DADDD22AFE7DE004F8481 /* DaBao.py in Resources */,
 				F48067C722AF434F00C78471 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
