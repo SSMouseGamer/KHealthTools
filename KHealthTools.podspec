@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.license  = { :type => 'MIT', :file => 'LICENSE' }
     s.author   = { "liyunxin" => "447674668@qq.com" }
     s.homepage = "https://www.baidu.com"
-    s.source   = { :git => "http://source.kanghehealth.com/iOSBase/KHealthTools.git", :tag => "#{s.version}" }
+    s.source   = { :git => "https://github.com/SSMouseGamer/KHealthTools.git", :tag => "#{s.version}" }
     
     #这个是处理.h导入第三方头文件报错
     s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
