@@ -1,0 +1,204 @@
+{
+  "name": "KHealthTools",
+  "version": "0.2.1",
+  "summary": "Tools",
+  "description": "KHealthTools",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liyunxin": "447674668@qq.com"
+  },
+  "homepage": "https://www.baidu.com",
+  "source": {
+    "git": "http://source.kanghehealth.com/iOSBase/KHealthTools.git",
+    "tag": "0.2.1"
+  },
+  "user_target_xcconfig": {
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "1_Tools",
+      "source_files": "KHealthTools/1_Tools/*.{h,m}",
+      "subspecs": [
+        {
+          "name": "Tools",
+          "source_files": "KHealthTools/1_Tools/Tools/**/*.{h,m}"
+        },
+        {
+          "name": "Category",
+          "source_files": "KHealthTools/1_Tools/Category/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "2_Category",
+      "dependencies": {
+        "KHealthTools/1_Tools": [
+
+        ]
+      },
+      "source_files": "KHealthTools/2_Category/**/*.{h,m}"
+    },
+    {
+      "name": "3_ThirdLib",
+      "subspecs": [
+        {
+          "name": "KHRefresh",
+          "dependencies": {
+            "MJRefresh": [
+
+            ]
+          },
+          "source_files": "KHealthTools/3_ThirdLib/KHRefresh/**/*.{h,m}"
+        },
+        {
+          "name": "UserDefault",
+          "source_files": "KHealthTools/3_ThirdLib/UserDefault/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "4_Services",
+      "dependencies": {
+        "SDWebImage": [
+          "4.4.2"
+        ],
+        "KHealthTools/1_Tools": [
+
+        ],
+        "KHealthTools/2_Category": [
+
+        ],
+        "KHealthTools/3_ThirdLib": [
+
+        ]
+      },
+      "source_files": "KHealthTools/4_Services/*.{h,m}",
+      "subspecs": [
+        {
+          "name": "0_Config",
+          "source_files": "KHealthTools/4_Services/0_Config/**/*.{h,m}"
+        },
+        {
+          "name": "1_Services",
+          "source_files": "KHealthTools/4_Services/1_Services/**/*.{h,m}"
+        },
+        {
+          "name": "2_Task",
+          "source_files": "KHealthTools/4_Services/2_Task/**/*.{h,m}"
+        },
+        {
+          "name": "3_SDWebImageExtend",
+          "source_files": "KHealthTools/4_Services/3_SDWebImageExtend/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "5_Model",
+      "source_files": "KHealthTools/5_Model/**/*.{h,m}"
+    },
+    {
+      "name": "6_View",
+      "source_files": "KHealthTools/6_View/*.{h,m}",
+      "subspecs": [
+        {
+          "name": "KHHUD",
+          "source_files": "KHealthTools/6_View/KHHUD/**/*.{h,m}"
+        },
+        {
+          "name": "KHEmptyView",
+          "source_files": "KHealthTools/6_View/KHEmptyView/**/*.{h,m}"
+        },
+        {
+          "name": "KHTableView",
+          "source_files": "KHealthTools/6_View/KHTableView/**/*.{h,m}"
+        },
+        {
+          "name": "KHButton",
+          "source_files": "KHealthTools/6_View/KHButton/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "7_BaseController",
+      "dependencies": {
+        "KHealthTools/4_Services": [
+
+        ],
+        "KHealthTools/5_Model": [
+
+        ],
+        "KHealthTools/6_View": [
+
+        ]
+      },
+      "source_files": "KHealthTools/7_BaseController/**/*.{h,m}"
+    },
+    {
+      "name": "7_Controller",
+      "dependencies": {
+        "KHealthTools/7_BaseController": [
+
+        ]
+      },
+      "subspecs": [
+        {
+          "name": "ListController",
+          "source_files": "KHealthTools/7_Controller/ListController/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "8_PhotoManager",
+      "dependencies": {
+        "KHealthTools/7_Controller": [
+
+        ]
+      },
+      "source_files": "KHealthTools/8_PhotoManager/**/*.{h,m}"
+    },
+    {
+      "name": "9_Action",
+      "dependencies": {
+        "KHealthTools/7_Controller": [
+
+        ]
+      },
+      "subspecs": [
+        {
+          "name": "Calendar",
+          "source_files": "KHealthTools/9_Action/Calendar/**/*.{h,m}"
+        },
+        {
+          "name": "SetupFontScale",
+          "source_files": "KHealthTools/9_Action/SetupFontScale/**/*.{h,m}"
+        },
+        {
+          "name": "TimerManager",
+          "source_files": "KHealthTools/9_Action/TimerManager/**/*.{h,m}"
+        }
+      ]
+    },
+    {
+      "name": "0_Base",
+      "dependencies": {
+        "KHealthTools/9_Action": [
+
+        ]
+      },
+      "source_files": "KHealthTools/0_Base/**/*.{h,m}",
+      "resource_bundles": {
+        "KHealthTools": [
+          "KHealthTools/0_Base/*.xcassets"
+        ]
+      }
+    }
+  ]
+}

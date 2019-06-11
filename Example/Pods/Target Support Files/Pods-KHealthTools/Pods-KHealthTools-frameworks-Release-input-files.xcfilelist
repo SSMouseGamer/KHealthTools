@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-KHealthTools/Pods-KHealthTools-frameworks.sh
+${BUILT_PRODUCTS_DIR}/KHealthTools/KHealthTools.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

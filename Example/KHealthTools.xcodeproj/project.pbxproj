@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		139CC2CE1C87ECC8161520EF /* Pods_KHealthTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BC6713DEC3030163398D66 /* Pods_KHealthTools.framework */; };
+		F440D11B211AF86D004174A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F440D11A211AF86D004174A6 /* AppDelegate.m */; };
+		F44B8EA9211B0264006BB100 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44B8EA8211B0264006BB100 /* ViewController.m */; };
+		F4576743224CA3E9000492BC /* KHQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4576742224CA3E9000492BC /* KHQueue.m */; };
+		F46333EF2249B69100E7B561 /* KLayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F46333E42249B69100E7B561 /* KLayerLabel.m */; };
+		F46333F02249B69100E7B561 /* LabelView+FuncTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F46333E62249B69100E7B561 /* LabelView+FuncTest.m */; };
+		F46333F12249B69100E7B561 /* LabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46333E82249B69100E7B561 /* LabelView.m */; };
+		F46333F22249B69100E7B561 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F46333EA2249B69100E7B561 /* LayerLabel.m */; };
+		F46333F32249B69100E7B561 /* TextLayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F46333EC2249B69100E7B561 /* TextLayerCell.m */; };
+		F46333F42249B69100E7B561 /* TextLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46333EE2249B69100E7B561 /* TextLayerController.m */; };
+		F48067C622AF434F00C78471 /* locationDebug.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F48067C022AF434F00C78471 /* locationDebug.gpx */; };
+		F48067C722AF434F00C78471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48067C122AF434F00C78471 /* Assets.xcassets */; };
+		F48067C922AF434F00C78471 /* khts_navi_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = F48067C322AF434F00C78471 /* khts_navi_config.plist */; };
+		F48067CA22AF434F00C78471 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48067C422AF434F00C78471 /* LaunchScreen.storyboard */; };
+		F48067CB22AF434F00C78471 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48067C522AF434F00C78471 /* main.m */; };
+		F48067CE22AF4B1D00C78471 /* KHPhotoDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48067CC22AF4B1D00C78471 /* KHPhotoDemoController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B8350DE130AAE09E75AB08C /* Pods-KHealthTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHealthTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KHealthTools/Pods-KHealthTools.debug.xcconfig"; sourceTree = "<group>"; };
+		D1BC6713DEC3030163398D66 /* Pods_KHealthTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KHealthTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D728D38E593B1BB566B0BB48 /* Pods-KHealthTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KHealthTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-KHealthTools/Pods-KHealthTools.release.xcconfig"; sourceTree = "<group>"; };
+		F440D116211AF86D004174A6 /* KHealthTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHealthTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F440D119211AF86D004174A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F440D11A211AF86D004174A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F44B8EA7211B0264006BB100 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F44B8EA8211B0264006BB100 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F4576741224CA3E9000492BC /* KHQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHQueue.h; sourceTree = "<group>"; };
+		F4576742224CA3E9000492BC /* KHQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KHQueue.m; sourceTree = "<group>"; };
+		F46333E32249B69100E7B561 /* KLayerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLayerLabel.h; sourceTree = "<group>"; };
+		F46333E42249B69100E7B561 /* KLayerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLayerLabel.m; sourceTree = "<group>"; };
+		F46333E52249B69100E7B561 /* LabelView+FuncTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelView+FuncTest.h"; sourceTree = "<group>"; };
+		F46333E62249B69100E7B561 /* LabelView+FuncTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LabelView+FuncTest.m"; sourceTree = "<group>"; };
+		F46333E72249B69100E7B561 /* LabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelView.h; sourceTree = "<group>"; };
+		F46333E82249B69100E7B561 /* LabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelView.m; sourceTree = "<group>"; };
+		F46333E92249B69100E7B561 /* LayerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
+		F46333EA2249B69100E7B561 /* LayerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
+		F46333EB2249B69100E7B561 /* TextLayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayerCell.h; sourceTree = "<group>"; };
+		F46333EC2249B69100E7B561 /* TextLayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayerCell.m; sourceTree = "<group>"; };
+		F46333ED2249B69100E7B561 /* TextLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayerController.h; sourceTree = "<group>"; };
+		F46333EE2249B69100E7B561 /* TextLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayerController.m; sourceTree = "<group>"; };
+		F48067C022AF434F00C78471 /* locationDebug.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = locationDebug.gpx; sourceTree = "<group>"; };
+		F48067C122AF434F00C78471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F48067C222AF434F00C78471 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48067C322AF434F00C78471 /* khts_navi_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = khts_navi_config.plist; sourceTree = "<group>"; };
+		F48067C422AF434F00C78471 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F48067C522AF434F00C78471 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F48067CC22AF4B1D00C78471 /* KHPhotoDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KHPhotoDemoController.m; sourceTree = "<group>"; };
+		F48067CD22AF4B1D00C78471 /* KHPhotoDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KHPhotoDemoController.h; sourceTree = "<group>"; };
+		F486D87022794CAA00EDDC07 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F440D113211AF86D004174A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				139CC2CE1C87ECC8161520EF /* Pods_KHealthTools.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		533B3381C12534CB84F10EA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B8350DE130AAE09E75AB08C /* Pods-KHealthTools.debug.xcconfig */,
+				D728D38E593B1BB566B0BB48 /* Pods-KHealthTools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4730774D155E29310DC7BFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F486D87022794CAA00EDDC07 /* HealthKit.framework */,
+				D1BC6713DEC3030163398D66 /* Pods_KHealthTools.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F440D10D211AF86D004174A6 = {
+			isa = PBXGroup;
+			children = (
+				F440D118211AF86D004174A6 /* KHealthTools */,
+				F440D117211AF86D004174A6 /* Products */,
+				533B3381C12534CB84F10EA0 /* Pods */,
+				D4730774D155E29310DC7BFE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F440D117211AF86D004174A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F440D116211AF86D004174A6 /* KHealthTools.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F440D118211AF86D004174A6 /* KHealthTools */ = {
+			isa = PBXGroup;
+			children = (
+				F440D119211AF86D004174A6 /* AppDelegate.h */,
+				F440D11A211AF86D004174A6 /* AppDelegate.m */,
+				F44B8EA7211B0264006BB100 /* ViewController.h */,
+				F44B8EA8211B0264006BB100 /* ViewController.m */,
+				F4576741224CA3E9000492BC /* KHQueue.h */,
+				F4576742224CA3E9000492BC /* KHQueue.m */,
+				F48067CD22AF4B1D00C78471 /* KHPhotoDemoController.h */,
+				F48067CC22AF4B1D00C78471 /* KHPhotoDemoController.m */,
+				F46333E22249B69100E7B561 /* LayerLabel */,
+				F48067BF22AF434F00C78471 /* Support Files */,
+			);
+			path = KHealthTools;
+			sourceTree = "<group>";
+		};
+		F46333E22249B69100E7B561 /* LayerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F46333E32249B69100E7B561 /* KLayerLabel.h */,
+				F46333E42249B69100E7B561 /* KLayerLabel.m */,
+				F46333E52249B69100E7B561 /* LabelView+FuncTest.h */,
+				F46333E62249B69100E7B561 /* LabelView+FuncTest.m */,
+				F46333E72249B69100E7B561 /* LabelView.h */,
+				F46333E82249B69100E7B561 /* LabelView.m */,
+				F46333E92249B69100E7B561 /* LayerLabel.h */,
+				F46333EA2249B69100E7B561 /* LayerLabel.m */,
+				F46333EB2249B69100E7B561 /* TextLayerCell.h */,
+				F46333EC2249B69100E7B561 /* TextLayerCell.m */,
+				F46333ED2249B69100E7B561 /* TextLayerController.h */,
+				F46333EE2249B69100E7B561 /* TextLayerController.m */,
+			);
+			path = LayerLabel;
+			sourceTree = "<group>";
+		};
+		F48067BF22AF434F00C78471 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F48067C222AF434F00C78471 /* Info.plist */,
+				F48067C322AF434F00C78471 /* khts_navi_config.plist */,
+				F48067C522AF434F00C78471 /* main.m */,
+				F48067C122AF434F00C78471 /* Assets.xcassets */,
+				F48067C422AF434F00C78471 /* LaunchScreen.storyboard */,
+				F48067C022AF434F00C78471 /* locationDebug.gpx */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F440D115211AF86D004174A6 /* KHealthTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F440D142211AF86E004174A6 /* Build configuration list for PBXNativeTarget "KHealthTools" */;
+			buildPhases = (
+				7CF85F2E2B20444C236B9A6F /* [CP] Check Pods Manifest.lock */,
+				F440D112211AF86D004174A6 /* Sources */,
+				F440D113211AF86D004174A6 /* Frameworks */,
+				F440D114211AF86D004174A6 /* Resources */,
+				8CA69BD57840EB31812A6B59 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KHealthTools;
+			productName = KHealthTools;
+			productReference = F440D116211AF86D004174A6 /* KHealthTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F440D10E211AF86D004174A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = lambert;
+				TargetAttributes = {
+					F440D115211AF86D004174A6 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F440D111211AF86D004174A6 /* Build configuration list for PBXProject "KHealthTools" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F440D10D211AF86D004174A6;
+			productRefGroup = F440D117211AF86D004174A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F440D115211AF86D004174A6 /* KHealthTools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F440D114211AF86D004174A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48067CA22AF434F00C78471 /* LaunchScreen.storyboard in Resources */,
+				F48067C622AF434F00C78471 /* locationDebug.gpx in Resources */,
+				F48067C922AF434F00C78471 /* khts_navi_config.plist in Resources */,
+				F48067C722AF434F00C78471 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CF85F2E2B20444C236B9A6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KHealthTools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CA69BD57840EB31812A6B59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KHealthTools/Pods-KHealthTools-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KHealthTools/Pods-KHealthTools-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KHealthTools/Pods-KHealthTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F440D112211AF86D004174A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F46333EF2249B69100E7B561 /* KLayerLabel.m in Sources */,
+				F44B8EA9211B0264006BB100 /* ViewController.m in Sources */,
+				F4576743224CA3E9000492BC /* KHQueue.m in Sources */,
+				F46333F42249B69100E7B561 /* TextLayerController.m in Sources */,
+				F440D11B211AF86D004174A6 /* AppDelegate.m in Sources */,
+				F46333F32249B69100E7B561 /* TextLayerCell.m in Sources */,
+				F46333F22249B69100E7B561 /* LayerLabel.m in Sources */,
+				F46333F02249B69100E7B561 /* LabelView+FuncTest.m in Sources */,
+				F48067CB22AF434F00C78471 /* main.m in Sources */,
+				F46333F12249B69100E7B561 /* LabelView.m in Sources */,
+				F48067CE22AF4B1D00C78471 /* KHPhotoDemoController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F440D140211AF86E004174A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F440D141211AF86E004174A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F440D143211AF86E004174A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B8350DE130AAE09E75AB08C /* Pods-KHealthTools.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALHYNRR3TV;
+				INFOPLIST_FILE = "$(SRCROOT)/KHealthTools/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanghe.KHealthTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F440D144211AF86E004174A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D728D38E593B1BB566B0BB48 /* Pods-KHealthTools.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ALHYNRR3TV;
+				INFOPLIST_FILE = "$(SRCROOT)/KHealthTools/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanghe.KHealthTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F440D111211AF86D004174A6 /* Build configuration list for PBXProject "KHealthTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F440D140211AF86E004174A6 /* Debug */,
+				F440D141211AF86E004174A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F440D142211AF86E004174A6 /* Build configuration list for PBXNativeTarget "KHealthTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F440D143211AF86E004174A6 /* Debug */,
+				F440D144211AF86E004174A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F440D10E211AF86D004174A6 /* Project object */;
+}

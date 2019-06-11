@@ -1,0 +1,6 @@
+framework module KHealthTools {
+  umbrella header "KHealthTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

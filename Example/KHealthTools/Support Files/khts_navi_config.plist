@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>navi_back_icon</key>
+	<string></string>
+	<key>navi_back_icon_white</key>
+	<string></string>
+	<key>navi_title_color</key>
+	<string>17,255,266</string>
+	<key>navi_title_font</key>
+	<integer>120</integer>
+</dict>
+</plist>

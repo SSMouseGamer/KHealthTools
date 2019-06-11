@@ -1,0 +1,6 @@
+framework module Pods_KHealthTools {
+  umbrella header "Pods-KHealthTools-umbrella.h"
+
+  export *
+  module * { export * }
+}
