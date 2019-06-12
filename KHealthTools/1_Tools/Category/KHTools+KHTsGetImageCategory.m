@@ -67,6 +67,22 @@
     return KH_RGB([colorS[0] integerValue], [colorS[1] integerValue], [colorS[2] integerValue]);
 }
 
++ (UIColor *)kh_getThemeColor {
+    NSString *colorStr = [self kh_getNaviConfigDict][@"theme_color"];
+    
+    if ([[NSString kh_str:colorStr Normal:@"abc"] isEqualToString:@"abc"]) {
+        return KH_RGBA( 38, 183, 188, 1);
+    }
+    
+    NSArray *colorS = [colorStr componentsSeparatedByString:@","];
+    if (colorS.count < 3) {
+        return KH_RGBA( 38, 183, 188, 1);
+    }
+    
+    return KH_RGB([colorS[0] integerValue], [colorS[1] integerValue], [colorS[2] integerValue]);
+    
+}
+
 #pragma mark - - 导航栏返回按钮 ------------------------------------------------------
 + (UIImage *)kh_getImage_naviBack {
     static UIImage *img = nil;

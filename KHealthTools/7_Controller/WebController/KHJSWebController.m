@@ -91,7 +91,7 @@
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
     
     self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, KHScreenWidth, KHMargin)];
-    self.progressView.progressTintColor = KH_RGBA( 38, 183, 188, 1);
+    self.progressView.progressTintColor = [KHTools kh_getThemeColor];
     self.progressView.trackTintColor = KHColorEAEAEA;
     [self.webView addSubview:self.progressView];
 }

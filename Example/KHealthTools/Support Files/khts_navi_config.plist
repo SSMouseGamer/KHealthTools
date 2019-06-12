@@ -10,5 +10,7 @@
 	<string>17,255,266</string>
 	<key>navi_title_font</key>
 	<integer>120</integer>
+	<key>theme_color</key>
+	<string>252,46,53</string>
 </dict>
 </plist>

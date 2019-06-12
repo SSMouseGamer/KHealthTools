@@ -18,6 +18,8 @@
 + (UIFont  *)kh_getNaviTitleFont;
 ///获取导航栏配置 - 文字颜色
 + (UIColor *)kh_getNaviTitleColor;
+///获取配置 - 主题颜色
++ (UIColor *)kh_getThemeColor;
 
 ///获取导航栏图标
 + (UIImage *)kh_getImage_naviBack;
