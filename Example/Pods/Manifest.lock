@@ -11,15 +11,13 @@ PODS:
     - KHealthTools/7_Controller (= 0.0.1)
     - KHealthTools/8_PhotoManager (= 0.0.1)
     - KHealthTools/9_Action (= 0.0.1)
-  - KHealthTools/0_Base (0.0.1):
-    - KHealthTools/9_Action
+  - KHealthTools/0_Base (0.0.1)
   - KHealthTools/1_Tools (0.0.1):
     - KHealthTools/1_Tools/Category (= 0.0.1)
     - KHealthTools/1_Tools/Tools (= 0.0.1)
   - KHealthTools/1_Tools/Category (0.0.1)
   - KHealthTools/1_Tools/Tools (0.0.1)
-  - KHealthTools/2_Category (0.0.1):
-    - KHealthTools/1_Tools
+  - KHealthTools/2_Category (0.0.1)
   - KHealthTools/3_ThirdLib (0.0.1):
     - KHealthTools/3_ThirdLib/KHRefresh (= 0.0.1)
     - KHealthTools/3_ThirdLib/UserDefault (= 0.0.1)
@@ -27,33 +25,18 @@ PODS:
     - MJRefresh
   - KHealthTools/3_ThirdLib/UserDefault (0.0.1)
   - KHealthTools/4_Services (0.0.1):
-    - KHealthTools/1_Tools
-    - KHealthTools/2_Category
-    - KHealthTools/3_ThirdLib
     - KHealthTools/4_Services/0_Config (= 0.0.1)
     - KHealthTools/4_Services/1_Services (= 0.0.1)
     - KHealthTools/4_Services/2_Task (= 0.0.1)
     - KHealthTools/4_Services/3_SDWebImageExtend (= 0.0.1)
     - SDWebImage (= 4.4.2)
   - KHealthTools/4_Services/0_Config (0.0.1):
-    - KHealthTools/1_Tools
-    - KHealthTools/2_Category
-    - KHealthTools/3_ThirdLib
     - SDWebImage (= 4.4.2)
   - KHealthTools/4_Services/1_Services (0.0.1):
-    - KHealthTools/1_Tools
-    - KHealthTools/2_Category
-    - KHealthTools/3_ThirdLib
     - SDWebImage (= 4.4.2)
   - KHealthTools/4_Services/2_Task (0.0.1):
-    - KHealthTools/1_Tools
-    - KHealthTools/2_Category
-    - KHealthTools/3_ThirdLib
     - SDWebImage (= 4.4.2)
   - KHealthTools/4_Services/3_SDWebImageExtend (0.0.1):
-    - KHealthTools/1_Tools
-    - KHealthTools/2_Category
-    - KHealthTools/3_ThirdLib
     - SDWebImage (= 4.4.2)
   - KHealthTools/5_Model (0.0.1)
   - KHealthTools/6_View (0.0.1):
@@ -65,34 +48,24 @@ PODS:
   - KHealthTools/6_View/KHEmptyView (0.0.1)
   - KHealthTools/6_View/KHHUD (0.0.1)
   - KHealthTools/6_View/KHTableView (0.0.1)
-  - KHealthTools/7_BaseController (0.0.1):
-    - KHealthTools/4_Services
-    - KHealthTools/5_Model
-    - KHealthTools/6_View
+  - KHealthTools/7_BaseController (0.0.1)
   - KHealthTools/7_Controller (0.0.1):
-    - KHealthTools/7_BaseController
     - KHealthTools/7_Controller/AlertInputController (= 0.0.1)
     - KHealthTools/7_Controller/ListController (= 0.0.1)
     - KHealthTools/7_Controller/StartController (= 0.0.1)
-  - KHealthTools/7_Controller/AlertInputController (0.0.1):
-    - KHealthTools/7_BaseController
-  - KHealthTools/7_Controller/ListController (0.0.1):
-    - KHealthTools/7_BaseController
-  - KHealthTools/7_Controller/StartController (0.0.1):
-    - KHealthTools/7_BaseController
-  - KHealthTools/8_PhotoManager (0.0.1):
-    - KHealthTools/7_Controller
+    - KHealthTools/7_Controller/WebController (= 0.0.1)
+  - KHealthTools/7_Controller/AlertInputController (0.0.1)
+  - KHealthTools/7_Controller/ListController (0.0.1)
+  - KHealthTools/7_Controller/StartController (0.0.1)
+  - KHealthTools/7_Controller/WebController (0.0.1)
+  - KHealthTools/8_PhotoManager (0.0.1)
   - KHealthTools/9_Action (0.0.1):
-    - KHealthTools/7_Controller
     - KHealthTools/9_Action/Calendar (= 0.0.1)
     - KHealthTools/9_Action/SetupFontScale (= 0.0.1)
     - KHealthTools/9_Action/TimerManager (= 0.0.1)
-  - KHealthTools/9_Action/Calendar (0.0.1):
-    - KHealthTools/7_Controller
-  - KHealthTools/9_Action/SetupFontScale (0.0.1):
-    - KHealthTools/7_Controller
-  - KHealthTools/9_Action/TimerManager (0.0.1):
-    - KHealthTools/7_Controller
+  - KHealthTools/9_Action/Calendar (0.0.1)
+  - KHealthTools/9_Action/SetupFontScale (0.0.1)
+  - KHealthTools/9_Action/TimerManager (0.0.1)
   - MJRefresh (3.2.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
@@ -111,7 +84,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KHealthTools: fef64791ca3cd30e6387e7710f723d1cd00f9a11
+  KHealthTools: fe0b9cdd7c418e484d3f738a56d7ba40fe1e5aaf
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 

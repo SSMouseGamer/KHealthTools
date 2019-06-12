@@ -24,10 +24,15 @@
 #import "KHClearNaviController.h"
 
 //----- 通用控制器 ---------------------------------------------------------------
-///网页
-#import "KHWebController.h"
+///弹框输入
+#import "KHAlertInputController.h"
 ///列表
 #import "KHTableListController.h"
+///启动页
+#import "KHBaseStartController.h"
+///网页
+#import "KHWebController.h"
+#import "KHJSWebController.h"
 
 //----- 功能 --------------------------------------------------------------------
 //1.日历数据

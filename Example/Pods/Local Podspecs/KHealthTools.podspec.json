@@ -39,11 +39,6 @@
     },
     {
       "name": "2_Category",
-      "dependencies": {
-        "KHealthTools/1_Tools": [
-
-        ]
-      },
       "source_files": "KHealthTools/2_Category/**/*.{h,m}"
     },
     {
@@ -69,15 +64,6 @@
       "dependencies": {
         "SDWebImage": [
           "4.4.2"
-        ],
-        "KHealthTools/1_Tools": [
-
-        ],
-        "KHealthTools/2_Category": [
-
-        ],
-        "KHealthTools/3_ThirdLib": [
-
         ]
       },
       "source_files": "KHealthTools/4_Services/*.{h,m}",
@@ -128,26 +114,10 @@
     },
     {
       "name": "7_BaseController",
-      "dependencies": {
-        "KHealthTools/4_Services": [
-
-        ],
-        "KHealthTools/5_Model": [
-
-        ],
-        "KHealthTools/6_View": [
-
-        ]
-      },
       "source_files": "KHealthTools/7_BaseController/**/*.{h,m}"
     },
     {
       "name": "7_Controller",
-      "dependencies": {
-        "KHealthTools/7_BaseController": [
-
-        ]
-      },
       "subspecs": [
         {
           "name": "ListController",
@@ -160,25 +130,19 @@
         {
           "name": "AlertInputController",
           "source_files": "KHealthTools/7_Controller/AlertInputController/**/*.{h,m}"
+        },
+        {
+          "name": "WebController",
+          "source_files": "KHealthTools/7_Controller/WebController/**/*.{h,m}"
         }
       ]
     },
     {
       "name": "8_PhotoManager",
-      "dependencies": {
-        "KHealthTools/7_Controller": [
-
-        ]
-      },
       "source_files": "KHealthTools/8_PhotoManager/**/*.{h,m}"
     },
     {
       "name": "9_Action",
-      "dependencies": {
-        "KHealthTools/7_Controller": [
-
-        ]
-      },
       "subspecs": [
         {
           "name": "Calendar",
@@ -196,11 +160,6 @@
     },
     {
       "name": "0_Base",
-      "dependencies": {
-        "KHealthTools/9_Action": [
-
-        ]
-      },
       "source_files": "KHealthTools/0_Base/**/*.{h,m}",
       "resource_bundles": {
         "KHealthTools": [
