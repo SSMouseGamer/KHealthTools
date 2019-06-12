@@ -63,7 +63,10 @@
     [self.btn setTitle:title forState:(UIControlStateNormal)];
     [self.btn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     [self.btn addTarget:self action:@selector(btnClick:) forControlEvents:(UIControlEventTouchUpInside)];
-    [self.btn kh_setRBgImgWithNormal:KHColorTheme Highlighted:KHColorTheme2];
+    
+    [self.btn kh_setBgImgWithNormal:KHColorTheme Highlighted:KHColorTheme2];
+    self.btn.layer.cornerRadius  = bH * 0.5;
+    self.btn.layer.masksToBounds = YES;
     
     [self setBtnEnabled:NO];
     [self addSubview:self.btn];
