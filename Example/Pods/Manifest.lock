@@ -71,8 +71,14 @@ PODS:
     - KHealthTools/6_View
   - KHealthTools/7_Controller (0.0.1):
     - KHealthTools/7_BaseController
+    - KHealthTools/7_Controller/AlertInputController (= 0.0.1)
     - KHealthTools/7_Controller/ListController (= 0.0.1)
+    - KHealthTools/7_Controller/StartController (= 0.0.1)
+  - KHealthTools/7_Controller/AlertInputController (0.0.1):
+    - KHealthTools/7_BaseController
   - KHealthTools/7_Controller/ListController (0.0.1):
+    - KHealthTools/7_BaseController
+  - KHealthTools/7_Controller/StartController (0.0.1):
     - KHealthTools/7_BaseController
   - KHealthTools/8_PhotoManager (0.0.1):
     - KHealthTools/7_Controller
@@ -105,7 +111,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KHealthTools: 09848c9358efd01071125eae1fc5e769460e974a
+  KHealthTools: fef64791ca3cd30e6387e7710f723d1cd00f9a11
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 

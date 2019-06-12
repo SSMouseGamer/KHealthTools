@@ -103,6 +103,13 @@ Pod::Spec.new do |s|
       sc.subspec 'ListController' do |sc_list|
         sc_list.source_files = "KHealthTools/7_Controller/ListController/**/*.{h,m}"
       end
+      sc.subspec 'StartController' do |sc_start|
+        sc_start.source_files = "KHealthTools/7_Controller/StartController/**/*.{h,m}"
+      end
+      sc.subspec 'AlertInputController' do |sc_ai|
+        sc_ai.source_files = "KHealthTools/7_Controller/AlertInputController/**/*.{h,m}"
+      end
+
     end #6_Controller
     
     

@@ -152,6 +152,14 @@
         {
           "name": "ListController",
           "source_files": "KHealthTools/7_Controller/ListController/**/*.{h,m}"
+        },
+        {
+          "name": "StartController",
+          "source_files": "KHealthTools/7_Controller/StartController/**/*.{h,m}"
+        },
+        {
+          "name": "AlertInputController",
+          "source_files": "KHealthTools/7_Controller/AlertInputController/**/*.{h,m}"
         }
       ]
     },

@@ -1,0 +1,14 @@
+//
+//  KHealthTools.pch
+//  KHealthTools
+//
+//  Created by 李云新 on 2019/6/12.
+//  Copyright © 2019年 lambert. All rights reserved.
+//
+
+#ifndef KHealthTools_pch
+#define KHealthTools_pch
+
+#import "KHealthTools/KHealthTools.h"
+
+#endif /* KHealthTools_pch */
