@@ -75,6 +75,7 @@
 #import "KHNavigationController.h"
 #import "KHViewController.h"
 #import "KHWebController.h"
+#import "KHAlertInputController.h"
 #import "KHTableListCell.h"
 #import "KHTableListController.h"
 #import "KHBaseStartController.h"
