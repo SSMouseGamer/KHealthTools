@@ -73,11 +73,12 @@
         NSInteger fontSize = [([self getNaviConfigDict][@"navi_title_font"]) integerValue];
         if (fontSize <= 0) {
             font = KHFont(17.0);
-        }
-        if (fontSize > 100) {
-            font = KHBoldFont(fontSize % 100);
         } else {
-            font = KHFont(fontSize);
+            if (fontSize > 100) {
+                font = KHBoldFont(fontSize % 100);
+            } else {
+                font = KHFont(fontSize);
+            }
         }
     }
     return font;
