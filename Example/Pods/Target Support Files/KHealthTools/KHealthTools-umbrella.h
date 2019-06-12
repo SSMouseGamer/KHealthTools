@@ -72,6 +72,7 @@
 #import "KHTableViewCell.h"
 #import "KHBaseViewController.h"
 #import "KHClearNaviController.h"
+#import "KHJSWebController.h"
 #import "KHNavigationController.h"
 #import "KHViewController.h"
 #import "KHWebController.h"
