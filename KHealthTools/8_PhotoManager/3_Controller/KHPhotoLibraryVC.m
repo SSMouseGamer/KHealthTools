@@ -60,7 +60,7 @@
 - (void)setupSubView {
     KHWeakObj(self);
     ///取消
-    self.navigationItem.rightBarButtonItem = [[KHBarButton rightBtnWithTitle:@"取消" Color:[KHTools kh_getThemeColor] ClickOption:^{
+    self.navigationItem.rightBarButtonItem = [[KHBarButton rightBtnWithTitle:@"取消" Color:KHColorTheme ClickOption:^{
         [weakSelf backBtnClick];
     }] getBarItem];
     CGFloat tH = self.kh_H + 49.0;///self.kh_H默认栈的第一个VC的可用高度 -49.0

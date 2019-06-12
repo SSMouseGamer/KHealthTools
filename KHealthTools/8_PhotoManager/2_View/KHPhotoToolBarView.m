@@ -48,7 +48,7 @@
     [self.sureBtn.titleLabel setFont:KHFont13];
     [self.sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.sureBtn setBackgroundImage:[KHColorF5F5F5 kh_getImageWithSize:self.sureBtn.kh_size Radius:2.0] forState:(UIControlStateDisabled)];
-    [self.sureBtn setBackgroundImage:[[KHTools kh_getThemeColor] kh_getImageWithSize:self.sureBtn.kh_size Radius:2.0] forState:(UIControlStateNormal)];
+    [self.sureBtn setBackgroundImage:[KHColorTheme kh_getImageWithSize:self.sureBtn.kh_size Radius:2.0] forState:(UIControlStateNormal)];
     self.sureBtn.enabled = NO;
     [self.sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.sureBtn];

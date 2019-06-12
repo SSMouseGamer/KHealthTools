@@ -61,6 +61,7 @@
 #import "YYModel.h"
 #import "KHViewHeader.h"
 #import "KHBarButton.h"
+#import "KHMainBottomBtn.h"
 #import "KHEmptyView.h"
 #import "UIScrollView+KHEmpty.h"
 #import "KHHUD.h"

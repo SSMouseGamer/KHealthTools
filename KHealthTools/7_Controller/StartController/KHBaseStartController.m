@@ -97,7 +97,7 @@
             NSString *str = [@"跳过 " stringByAppendingFormat:@"%ld", (long)i];
             NSMutableAttributedString *aStr = [[NSMutableAttributedString alloc] initWithString:str];
             [aStr addAttribute:NSForegroundColorAttributeName
-                         value:[KHTools kh_getThemeColor]
+                         value:KHColorTheme
                          range:NSMakeRange(3, str.length - 3)];
             [weakSelf.goBtn setAttributedTitle:aStr forState:(UIControlStateNormal)];
             

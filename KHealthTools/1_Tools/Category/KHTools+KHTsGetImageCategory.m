@@ -12,160 +12,126 @@
 
 ///获取头像占位图
 + (UIImage *)kh_getImage_head_placeholder {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [UIImage imageNamed:@"kh_head_placeholder"];
-    }
-    return img;
+    return [UIImage imageNamed:@"kh_head_placeholder"];
 }
 
 ///获取占位图
 + (UIImage *)kh_getImage_normal_placeholder {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [UIImage imageNamed:@"kh_normal_placeholder"];
-    }
-    return img;
+    return [UIImage imageNamed:@"kh_normal_placeholder"];
 }
 
-#pragma mark -
-+ (NSDictionary *)kh_getNaviConfigDict {
+#pragma mark - 获取主题配置
++ (NSDictionary *)getNaviConfigDict {
     static NSDictionary *serviceDomainDict;
     if (serviceDomainDict == nil) {
-        NSString *originPath = [[NSBundle mainBundle] pathForResource:@"khts_navi_config"
-                                                               ofType:@"plist"];
+        NSString *originPath = [[NSBundle mainBundle] pathForResource:@"khts_navi_config" ofType:@"plist"];
         serviceDomainDict = [[NSDictionary alloc] initWithContentsOfFile:originPath];
     }
-    
     return serviceDomainDict;
 }
 
-+ (UIFont *)kh_getNaviTitleFont {
-    NSInteger fontSize = [([self kh_getNaviConfigDict][@"navi_title_font"]) integerValue];
-    if (fontSize <= 0) {
-        return KHFont(17.0);
-    }
-    if (fontSize > 100) {
-        return KHBoldFont(fontSize % 100);
++ (UIColor *)getConfigColor:(NSString *)key NormalColor:(UIColor *)nColor {
+    NSString *colorStr = [NSString kh_str:[self getNaviConfigDict][key] Normal:@"a"];
+    NSArray *colorS = [colorStr componentsSeparatedByString:@","];
+    
+    if (colorS.count < 3) {
+        return nColor;
     } else {
-        return KHFont(fontSize);
+        return KH_RGB([colorS[0] integerValue], [colorS[1] integerValue], [colorS[2] integerValue]);
     }
 }
 
-+ (UIColor *)kh_getNaviTitleColor {
-    NSString *colorStr = [self kh_getNaviConfigDict][@"navi_title_color"];
-    
-    if ([[NSString kh_str:colorStr Normal:@"abc"] isEqualToString:@"abc"]) {
-        return KHColor333333;
++ (UIImage *)getConfigImage:(NSString *)key NormalImage:(NSString *)nImgStr {
+    NSString *backIcon = [self getNaviConfigDict][key];
+    if (![[NSString kh_str:backIcon Normal:@"abc"] isEqualToString:@"abc"]) {
+        return [UIImage imageNamed:backIcon];
+    } else {
+        return [KHTools kh_getToolsBundleImage:nImgStr];
     }
-    
-    NSArray *colorS = [colorStr componentsSeparatedByString:@","];
-    if (colorS.count < 3) {
-        return KHColor333333;
-    }
-    
-    return KH_RGB([colorS[0] integerValue], [colorS[1] integerValue], [colorS[2] integerValue]);
 }
 
-+ (UIColor *)kh_getThemeColor {
-    NSString *colorStr = [self kh_getNaviConfigDict][@"theme_color"];
-    
-    if ([[NSString kh_str:colorStr Normal:@"abc"] isEqualToString:@"abc"]) {
-        return KH_RGBA( 38, 183, 188, 1);
-    }
-    
-    NSArray *colorS = [colorStr componentsSeparatedByString:@","];
-    if (colorS.count < 3) {
-        return KH_RGBA( 38, 183, 188, 1);
-    }
-    
-    return KH_RGB([colorS[0] integerValue], [colorS[1] integerValue], [colorS[2] integerValue]);
-    
-}
-
-#pragma mark - - 导航栏返回按钮 ------------------------------------------------------
-+ (UIImage *)kh_getImage_naviBack {
+#pragma mark - 导航栏
++ (UIImage *)naviBackImg {
     static UIImage *img = nil;
     if (img == nil) {
-        NSString *backIcon = [self kh_getNaviConfigDict][@"navi_back_icon"];
-        if (![[NSString kh_str:backIcon Normal:@"abc"] isEqualToString:@"abc"]) {
-            img = [UIImage imageNamed:backIcon];
+        img = [KHTools getConfigImage:@"navi_back_icon" NormalImage:@"kht_nav_back"];
+    }
+    return img;
+}
+
++ (UIImage *)naviBackImg_White {
+    static UIImage *img = nil;
+    if (img == nil) {
+        img = [KHTools getConfigImage:@"navi_back_icon_white" NormalImage:@"kht_nav_back_white"];
+    }
+    return img;
+}
+
++ (UIFont *)naviTitleFont {
+    static UIFont *font = nil;
+    if (font == nil) {
+        NSInteger fontSize = [([self getNaviConfigDict][@"navi_title_font"]) integerValue];
+        if (fontSize <= 0) {
+            font = KHFont(17.0);
+        }
+        if (fontSize > 100) {
+            font = KHBoldFont(fontSize % 100);
         } else {
-            img = [KHTools kh_getToolsBundleImage:@"kht_nav_back"];
+            font = KHFont(fontSize);
         }
     }
-    return img;
+    return font;
 }
 
-+ (UIImage *)kh_getImage_naviBack_White {
-    static UIImage *img = nil;
-    if (img == nil) {
-        NSString *backIcon = [self kh_getNaviConfigDict][@"navi_back_icon_white"];
-        if (![[NSString kh_str:backIcon Normal:@"abc"] isEqualToString:@"abc"]) {
-            img = [UIImage imageNamed:backIcon];
-        } else {
-            img = [KHTools kh_getToolsBundleImage:@"kht_nav_back_white"];
-        }
-    }
-    return img;
++ (UIColor *)naviTitleColor {
+    return [KHTools getConfigColor:@"navi_title_color" NormalColor:KHColor333333];
 }
 
-#pragma mark - - 箭头 ------------------------------------------------------
-+ (UIImage *)kh_getImage_Aarrow_Right {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_arrow_right"];
+#pragma mark - 主题颜色
++ (UIColor *)themeColor {
+    static UIColor *theMeColor;
+    if (theMeColor == nil) {
+        theMeColor = [KHTools getConfigColor:@"theme_color" NormalColor:KH_RGB(38, 183, 188)];
     }
-    return img;
+    return theMeColor;
 }
 
-+ (UIImage *)kh_getImage_Aarrow_Up {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_arrow_up"];
++ (UIColor *)themeColor2 {
+    static UIColor *theMeColor;
+    if (theMeColor == nil) {
+        theMeColor = [KHTools getConfigColor:@"theme_color2" NormalColor:KH_RGB(146, 219, 221)];
     }
-    return img;
+    return theMeColor;
 }
 
-+ (UIImage *)kh_getImage_Aarrow_Down {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_arrow_down"];
-    }
-    return img;
+#pragma mark - 箭头
++ (UIImage *)arrowImg_Right {
+    return [KHTools kh_getToolsBundleImage:@"kht_arrow_right"];
 }
 
-#pragma mark - - 选择按钮 --------------------------------------------------
-+ (UIImage *)kh_getImage_Choose_Sel {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_choose_sel"];
-    }
-    return img;
++ (UIImage *)arrowImg_Up {
+    return [KHTools kh_getToolsBundleImage:@"kht_arrow_up"];
 }
 
-+ (UIImage *)kh_getImage_Choose_Sel_White {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_choose_sel_white"];
-    }
-    return img;
++ (UIImage *)arrowImg_Down {
+    return [KHTools kh_getToolsBundleImage:@"kht_arrow_down"];
 }
 
-+ (UIImage *)kh_getImage_Choose_Nor {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_choose_nor"];
-    }
-    return img;
+#pragma mark - 选择按钮
++ (UIImage *)chooseImg_Sel {
+    return [KHTools kh_getToolsBundleImage:@"kht_choose_sel"];
 }
 
-+ (UIImage *)kh_getImage_Choose_End {
-    static UIImage *img = nil;
-    if (img == nil) {
-        img = [KHTools kh_getToolsBundleImage:@"kht_choose_end"];
-    }
-    return img;
++ (UIImage *)chooseImg_Sel_White {
+    return [KHTools kh_getToolsBundleImage:@"kht_choose_sel_white"];
+}
+
++ (UIImage *)chooseImg_Nor {
+    return [KHTools kh_getToolsBundleImage:@"kht_choose_nor"];
+}
+
++ (UIImage *)chooseImg_End {
+    return [KHTools kh_getToolsBundleImage:@"kht_choose_end"];
 }
 
 @end

@@ -96,7 +96,7 @@
     switch (style) {
         case KHNAV_STYLE_B_B:
             [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-            [self setNaviBarWithTintColor:[KHTools kh_getNaviTitleColor]];
+            [self setNaviBarWithTintColor:KHTools.naviTitleColor];
             break;
         case KHNAV_STYLE_W_W:
             [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
@@ -117,7 +117,7 @@
     self.navigationController.navigationBar.tintColor = tintColor;
     
     //2.导航栏title
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:tintColor, NSFontAttributeName:[KHTools kh_getNaviTitleFont]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:tintColor, NSFontAttributeName:KHTools.naviTitleFont};
     
     //3.设置导航栏背景
     static UIImage *clearBgImage = nil;
@@ -130,8 +130,8 @@
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     
     //5.返回按钮图标
-    self.navigationController.navigationBar.backIndicatorImage = [KHTools kh_getImage_naviBack];
-    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [KHTools kh_getImage_naviBack];
+    self.navigationController.navigationBar.backIndicatorImage = KHTools.naviBackImg;
+    self.navigationController.navigationBar.backIndicatorTransitionMaskImage = KHTools.naviBackImg;
 }
 
 @end

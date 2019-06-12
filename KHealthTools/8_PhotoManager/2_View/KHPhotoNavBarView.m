@@ -37,7 +37,7 @@
     
     CGRect bR = CGRectMake(0, 0, KH_Navi_Title_Height, KH_Navi_Title_Height);
     self.backBtn = [[UIButton alloc] initWithFrame:bR];
-    [self.backBtn setImage:[KHTools kh_getImage_naviBack_White]
+    [self.backBtn setImage:KHTools.naviBackImg_White
                   forState:(UIControlStateNormal)];
     [self.backBtn addTarget:self action:@selector(backBtnClick)
            forControlEvents:(UIControlEventTouchUpInside)];
@@ -47,9 +47,9 @@
     CGFloat sW = 22.0;
     CGFloat sX = KHScreenWidth - KHMargin - sW;
     self.selBtn = [[UIButton alloc] initWithFrame:CGRectMake(sX, 0, sW, sW)];
-    [self.selBtn setBackgroundImage:[KHTools kh_getImage_Choose_Sel_White]
+    [self.selBtn setBackgroundImage:KHTools.chooseImg_Sel_White
                                forState:(UIControlStateNormal)];
-    [self.selBtn setBackgroundImage:[KHTools kh_getImage_Choose_Sel]
+    [self.selBtn setBackgroundImage:KHTools.chooseImg_Sel
                                forState:(UIControlStateSelected)];
     [self.selBtn addTarget:self action:@selector(selBtnClicked:)
           forControlEvents:UIControlEventTouchUpInside];

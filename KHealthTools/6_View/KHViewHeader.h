@@ -22,6 +22,7 @@
 
 //4、导航栏按钮
 #import "KHBarButton.h"
-
+//5、底部提交按钮
+#import "KHMainBottomBtn.h"
 
 #endif /* KHViewHeader_h */

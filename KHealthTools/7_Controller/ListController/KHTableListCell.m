@@ -148,7 +148,7 @@
     CGFloat aX = self.kh_width - aW - KH15Margin;
     CGFloat aY = (self.kh_height - aW) * 0.5;
     self.arrowView = [[UIImageView alloc] initWithFrame:CGRectMake(aX, aY, aW, aW)];
-    self.arrowView.image = [KHTools kh_getImage_Aarrow_Right];
+    self.arrowView.image = KHTools.arrowImg_Right;
     [self.contentView addSubview:self.arrowView];
     
     UIFont *tF    = KHFont15;
