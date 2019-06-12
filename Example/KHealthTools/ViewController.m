@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "KHealthTools/KHealthTools.h"
-
 #import "TextLayerController.h"
 #import "KHFontSizeSettingController.h"
 #import "KHPhotoDemoController.h"

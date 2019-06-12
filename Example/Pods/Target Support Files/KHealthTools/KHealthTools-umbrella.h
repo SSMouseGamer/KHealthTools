@@ -77,6 +77,7 @@
 #import "KHWebController.h"
 #import "KHTableListCell.h"
 #import "KHTableListController.h"
+#import "KHBaseStartController.h"
 #import "KHPhotoTool.h"
 #import "KHSelPhotoCollectionCell.h"
 #import "KHSelPhotoView+FuncCategory.h"

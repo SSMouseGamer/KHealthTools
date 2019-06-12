@@ -1,6 +1,6 @@
 {
   "name": "KHealthTools",
-  "version": "0.2.1",
+  "version": "0.0.1",
   "summary": "Tools",
   "description": "KHealthTools",
   "license": {
@@ -12,8 +12,8 @@
   },
   "homepage": "https://www.baidu.com",
   "source": {
-    "git": "http://source.kanghehealth.com/iOSBase/KHealthTools.git",
-    "tag": "0.2.1"
+    "git": "https://github.com/SSMouseGamer/KHealthTools.git",
+    "tag": "0.0.1"
   },
   "user_target_xcconfig": {
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
@@ -152,6 +152,10 @@
         {
           "name": "ListController",
           "source_files": "KHealthTools/7_Controller/ListController/**/*.{h,m}"
+        },
+        {
+          "name": "StartController",
+          "source_files": "KHealthTools/7_Controller/StartController/**/*.{h,m}"
         }
       ]
     },
