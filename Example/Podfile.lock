@@ -26,11 +26,14 @@ PODS:
   - KHealthTools/3_ThirdLib/UserDefault (0.0.1)
   - KHealthTools/4_Services (0.0.1):
     - KHealthTools/4_Services/0_Config (= 0.0.1)
+    - KHealthTools/4_Services/0_Tools (= 0.0.1)
     - KHealthTools/4_Services/1_Services (= 0.0.1)
     - KHealthTools/4_Services/2_Task (= 0.0.1)
     - KHealthTools/4_Services/3_SDWebImageExtend (= 0.0.1)
     - SDWebImage (= 4.4.2)
   - KHealthTools/4_Services/0_Config (0.0.1):
+    - SDWebImage (= 4.4.2)
+  - KHealthTools/4_Services/0_Tools (0.0.1):
     - SDWebImage (= 4.4.2)
   - KHealthTools/4_Services/1_Services (0.0.1):
     - SDWebImage (= 4.4.2)
@@ -84,7 +87,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KHealthTools: fe0b9cdd7c418e484d3f738a56d7ba40fe1e5aaf
+  KHealthTools: 5b7a506a3670f754d2d32bf72f04854cf35a3d42
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 

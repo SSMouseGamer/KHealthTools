@@ -52,6 +52,9 @@ Pod::Spec.new do |s|
         ss.subspec '0_Config' do |ss_0|
           ss_0.source_files = "KHealthTools/4_Services/0_Config/**/*.{h,m}"
         end
+        ss.subspec '0_Tools' do |ss_0|
+          ss_0.source_files = "KHealthTools/4_Services/0_Tools/**/*.{h,m}"
+        end
         ss.subspec '1_Services' do |ss_1|
           ss_1.source_files = "KHealthTools/4_Services/1_Services/**/*.{h,m}"
         end

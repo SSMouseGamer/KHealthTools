@@ -67,11 +67,7 @@
         [[KHServices share].requestDicts removeObjectForKey:task.path];
         
         //处理数据
-        [KHServicesResolve resolveWithDataType:dataType
-                                          Data:data
-                                      Response:response
-                                         Error:error
-                                 CompleteBlock:completeBlock];
+        [KHServicesResolve resolveWithDataType:dataType Data:data Error:error CompleteBlock:completeBlock];
     }];
     
     //5.fire

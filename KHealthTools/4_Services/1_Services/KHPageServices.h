@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KHServicesTask.h"
-
-typedef void (^KHServicePageOption)(NSArray *jArray, BOOL isMore, BOOL success, NSInteger code, NSString *msg);
+#import "KHServicesMacro.h"
 
 @interface KHPageServices : NSObject
 

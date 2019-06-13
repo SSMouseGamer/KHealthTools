@@ -14,7 +14,6 @@
 #import "KHServices.h"
 #import "KHPageServices.h"
 #import "KHServices+UploadCategory.h"
-#import "KHServicesBasePath.h"
 
 #import "KHServicesMacro.h"
 #import "KHServicesResolve.h"

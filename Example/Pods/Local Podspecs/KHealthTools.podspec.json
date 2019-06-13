@@ -73,6 +73,10 @@
           "source_files": "KHealthTools/4_Services/0_Config/**/*.{h,m}"
         },
         {
+          "name": "0_Tools",
+          "source_files": "KHealthTools/4_Services/0_Tools/**/*.{h,m}"
+        },
+        {
           "name": "1_Services",
           "source_files": "KHealthTools/4_Services/1_Services/**/*.{h,m}"
         },

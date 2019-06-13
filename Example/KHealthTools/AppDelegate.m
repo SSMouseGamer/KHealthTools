@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "KHStartController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<KHServicesPublicActionDelegate>
 
 @end
 
@@ -22,7 +22,19 @@
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[KHStartController alloc] init];
     
+    //网络访问公共错误处理
+    [KHServices share].publicActionCodeDict = @{@(401):@"重新登录"};
+    [KHServices share].publicActionDelegate = self;
+    
     return YES;
+}
+
+- (void)kh_ServicesPublicActionWithCode:(NSInteger)code Message:(NSString *)message {
+    KHLog(@"code %ld, message %@", (long)code, message);
+}
+
+- (void)kh_ServicesCustomResolveWithDataType:(Class)dataType Data:(NSData *)data Error:(NSError *)error CompleteBlock:(KHServicesAnyOption)cBlock {
+    KHLog(@"请自己处理");
 }
 
 @end
