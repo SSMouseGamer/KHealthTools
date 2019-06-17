@@ -83,7 +83,7 @@
     
     self.task.path = ({
         NSString *path = [NSString kh_str:self.task.path Normal:@"233"];
-        [path stringByAppendingFormat:@"?pageNo=%ld&pageSize=%ld",self.pageNo,self.pageSize];
+        path = [path stringByAppendingFormat:@"?%@=%ld&%@=%ld",self.pageNoKey, self.pageNo, self.pageSizeKey, self.pageSize];
         path;
     });
     
