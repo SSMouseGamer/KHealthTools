@@ -13,6 +13,7 @@
 
 #import "KHServices.h"
 #import "KHPageServices.h"
+#import "KHNewPageService.h"
 #import "KHServices+UploadCategory.h"
 
 #import "KHServicesMacro.h"

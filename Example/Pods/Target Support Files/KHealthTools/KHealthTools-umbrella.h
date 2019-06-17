@@ -44,6 +44,7 @@
 #import "KHServicesConfig.h"
 #import "KHServicesMacro.h"
 #import "KHServicesResolve.h"
+#import "KHNewPageService.h"
 #import "KHPageServices.h"
 #import "KHServices+UploadCategory.h"
 #import "KHServices.h"
