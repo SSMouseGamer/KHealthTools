@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <gpx version="1.1" creator="Xcode">
-    <wpt lon="113.28350" lat="23.13150"> <name>working</name> </wpt>
+    <wpt lon="113.28540" lat="23.12750"> <name>working</name> </wpt>
     <!--
-     <wpt lon="113.28540" lat="23.12750"> <name>working</name> </wpt>
+     <wpt lon="113.28350" lat="23.13150"> <name>zsdx</name> </wpt>
      -->
 </gpx>
+
