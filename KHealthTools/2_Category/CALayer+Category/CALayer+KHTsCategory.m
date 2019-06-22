@@ -52,6 +52,7 @@
  */
 - (void)kh_setFont:(UIFont *)font Auto:(BOOL)is_auto {
     self.fontSize = font.pointSize;
+    self.font = (__bridge CFTypeRef)font.fontName;
     if (is_auto) {
         self.kh_height = font.lineHeight;
     }
