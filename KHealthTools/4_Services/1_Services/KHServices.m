@@ -65,7 +65,14 @@
     NSURLSessionDataTask *sessionDataTask = [self.session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         //处理缓存请求
         [[KHServices share].requestDicts removeObjectForKey:task.path];
-        
+        ///处理网络连接层报错的信息
+        NSHTTPURLResponse *resp = (NSHTTPURLResponse *)response;
+        if (![data isKindOfClass:[NSData class]] && !error && resp.statusCode != 200) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completeBlock(nil, NO, resp.statusCode, [NSHTTPURLResponse localizedStringForStatusCode:resp.statusCode]);
+            });
+            return;
+        }
         //处理数据
         [KHServicesResolve resolveWithDataType:dataType Data:data Error:error CompleteBlock:completeBlock];
     }];

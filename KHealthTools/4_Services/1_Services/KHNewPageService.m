@@ -80,13 +80,17 @@
         self.pageNo = 1;
         self.totalPage = 65535;
     }
-    
-    self.task.path = ({
+    ///2.1 处理不同请求方式的页数、页面size的拼接方式，根据业务去定
+    if ([self.task.method isEqualToString:@"POST"]) { ///这里是因为post的分页数据，需要把页数、页面数据大小放在请求链接后面
         NSString *path = [NSString kh_str:self.task.path Normal:@"233"];
-        path = [path stringByAppendingFormat:@"?%@=%ld&%@=%ld",self.pageNoKey, self.pageNo, self.pageSizeKey, self.pageSize];
-        path;
-    });
-    
+        self.task.path = [path stringByAppendingFormat:@"?%@=%ld&%@=%ld",self.pageNoKey, self.pageNo, self.pageSizeKey, self.pageSize];
+    } else { ///通用的get方法
+        NSMutableDictionary *param = [NSMutableDictionary dictionary];
+        [param setValue:self.pageNo forKey:self.pageNoKey];
+        [param setValue:self.pageSize forKey:self.pageSizeKey];
+        [self.task setParam:param];
+    }
+
     //3.fire
     KHWeakObj(self);
     [[KHServices share] requestWithTask:self.task DictComplete:^(NSDictionary *jDict, BOOL success, NSInteger code, NSString *msg) {
