@@ -86,8 +86,8 @@
         self.task.path = [path stringByAppendingFormat:@"?%@=%ld&%@=%ld",self.pageNoKey, self.pageNo, self.pageSizeKey, self.pageSize];
     } else { ///通用的get方法
         NSMutableDictionary *param = [NSMutableDictionary dictionary];
-        [param setValue:self.pageNo forKey:self.pageNoKey];
-        [param setValue:self.pageSize forKey:self.pageSizeKey];
+        [param setValue:@(self.pageNo) forKey:self.pageNoKey];
+        [param setValue:@(self.pageSize) forKey:self.pageSizeKey];
         [self.task setParam:param];
     }
 
