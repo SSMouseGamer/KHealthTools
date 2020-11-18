@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     #这个是处理.h导入第三方头文件报错
     s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
     
-    s.platform   = :ios, "10.0"
+    s.platform   = :ios, "9.0"
     s.frameworks = 'UIKit'
     
     #工具类在这里

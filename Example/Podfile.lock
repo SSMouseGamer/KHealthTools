@@ -69,7 +69,7 @@ PODS:
   - KHealthTools/9_Action/Calendar (0.0.1)
   - KHealthTools/9_Action/SetupFontScale (0.0.1)
   - KHealthTools/9_Action/TimerManager (0.0.1)
-  - MJRefresh (3.2.0)
+  - MJRefresh (3.5.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
@@ -78,7 +78,7 @@ DEPENDENCIES:
   - KHealthTools (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - MJRefresh
     - SDWebImage
 
@@ -87,10 +87,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  KHealthTools: 5b7a506a3670f754d2d32bf72f04854cf35a3d42
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  KHealthTools: a1de3034994369b59694bf03054bc08cee1f8233
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
 PODFILE CHECKSUM: e69ba7936cadebb31bc0a500fdd5256f75295a7e
 
-COCOAPODS: 1.7.0.beta.3
+COCOAPODS: 1.9.3
