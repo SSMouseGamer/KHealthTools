@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KHServicesMacro.h"
+#import "KHServicesTask.h"
 
 @interface KHServicesResolve : NSObject
 
@@ -21,7 +22,7 @@
  @param error 错误
  @param cBlock 回参解析完成后的回调
  */
-+ (void)resolveWithDataType:(Class)dataType Data:(NSData *)data Error:(NSError *)error CompleteBlock:(KHServicesAnyOption)cBlock;
++ (void)resolveWithDataType:(Class)dataType Task:(KHServicesTask *)task Data:(NSData *)data Error:(NSError *)error CompleteBlock:(KHServicesAnyOption)cBlock;
 
 @end
 

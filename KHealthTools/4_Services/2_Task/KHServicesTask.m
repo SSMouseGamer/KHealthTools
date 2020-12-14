@@ -45,8 +45,19 @@
         self.param  = @{};
         self.is_Body_Params  = YES;
         self.timeOutInterval = 5;
+        self.contentType = KHServiceContentTypeJson;
+        [self initResolveDataKeys];
     }
     return self;
+}
+
+- (void)initResolveDataKeys {
+    self.businessDataKey = @"data";
+    self.businessSuccessKey = @"success";
+    self.codeKey = @"code";
+    self.msgKey = @"message";
+    self.otherKey = @"0";
+    self.successDefault = @"0";
 }
 
 - (void)dealloc {
@@ -73,7 +84,12 @@
     [request setHTTPMethod:self.method];
     
     //5.设置公共参数
-    [request setValue:@"application/json;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    if (self.contentType == KHServiceContentTypeJson) {
+        [request setValue:@"application/json;charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    } else {
+        [request setValue:@"application/x-www-form-urlencoded;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    }
+    
     for (NSString *key in [KHServices share].publicParam.allKeys) {
         [request setValue:[KHServices share].publicParam[key] forHTTPHeaderField:key];
     }
@@ -82,7 +98,13 @@
     if (self.is_Body_Params && ![self.method isEqualToString:@"GET"]) {
         //放在body里面
         if (self.param.allKeys.count > 0) {
-            [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:self.param     options:NSJSONWritingPrettyPrinted error:nil]];
+            id bodyData = nil;
+            if (self.contentType == KHServiceContentTypeJson) {
+                bodyData = [NSJSONSerialization dataWithJSONObject:self.param     options:NSJSONWritingPrettyPrinted error:nil];
+            } else {
+                bodyData = [[self getParamsStrWithParams:self.param] dataUsingEncoding:(NSUTF8StringEncoding)];
+            }
+            [request setHTTPBody:bodyData];
         }
     } else {
         //放在域名后面

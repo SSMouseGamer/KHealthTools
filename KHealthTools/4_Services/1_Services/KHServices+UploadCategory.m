@@ -36,7 +36,7 @@
     NSURLSessionUploadTask *uploadTask = [self.session uploadTaskWithRequest:request fromData:taskData completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         taskData = nil;
         
-        [KHServicesResolve resolveWithDataType:[NSString class] Data:data Error:error CompleteBlock:cBlock];
+        [KHServicesResolve resolveWithDataType:[NSString class] Task:task Data:data Error:error CompleteBlock:cBlock];
     }];
     [uploadTask resume];
 }
@@ -62,7 +62,7 @@
     NSURLSessionUploadTask *uploadTask = [self.session uploadTaskWithRequest:request fromData:taskData completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         taskData = nil;
         
-        [KHServicesResolve resolveWithDataType:[NSArray class] Data:data Error:error CompleteBlock:cBlock];
+        [KHServicesResolve resolveWithDataType:[NSArray class] Task:task Data:data Error:error CompleteBlock:cBlock];
     }];
     [uploadTask resume];
 }

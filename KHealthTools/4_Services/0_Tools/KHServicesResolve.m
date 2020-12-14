@@ -12,10 +12,10 @@
 @implementation KHServicesResolve
 
 ///数据解析
-+ (void)resolveWithDataType:(Class)dataType Data:(NSData *)data Error:(NSError *)error CompleteBlock:(KHServicesAnyOption)cBlock {
++ (void)resolveWithDataType:(Class)dataType Task:(KHServicesTask *)task Data:(NSData *)data Error:(NSError *)error CompleteBlock:(KHServicesAnyOption)cBlock {
     
-    if ([[KHServices share].publicActionDelegate respondsToSelector:@selector(kh_ServicesCustomResolveWithDataType:Data:Error:CompleteBlock:)]) {
-        [[KHServices share].publicActionDelegate kh_ServicesCustomResolveWithDataType:dataType Data:data Error:error CompleteBlock:cBlock];
+    if ([[KHServices share].publicActionDelegate respondsToSelector:@selector(kh_ServicesCustomResolveWithDataType:Task:Data:Error:CompleteBlock:)]) {
+        [[KHServices share].publicActionDelegate kh_ServicesCustomResolveWithDataType:dataType Task:task Data:data Error:error CompleteBlock:cBlock];
         return;
     }
     
@@ -28,16 +28,18 @@
     if (data != nil) {
         NSDictionary *baseDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
-        success = [[baseDict objectForKey:@"success"] boolValue];
-        dData   = [baseDict objectForKey:@"content"];
-        msg     = [baseDict objectForKey:@"message"];
-        code    = [[baseDict objectForKey:@"code"] integerValue];
+        success = [[baseDict objectForKey:task.businessSuccessKey] boolValue];
+        dData   = [task.otherKey isEqualToString:@"0"] ? [baseDict objectForKey:task.businessDataKey] : baseDict;
+        msg     = [baseDict objectForKey:task.msgKey];
+        code    = [[baseDict objectForKey:task.codeKey] integerValue];
     } else {
         code = error == nil ? -1 : error.code;
         msg = code == -1001 ? @"网络开了小差，请稍后再试～" : error.localizedDescription;
     }
-    
-    if (!dData || [dData isKindOfClass:[NSNull class]] || ![dData isKindOfClass:dataType]) {
+    if (![dData isKindOfClass:dataType] && ![task.otherKey isEqualToString:@"0"]) {
+        dData = [[dataType alloc] init];
+    }
+    if (!dData || [dData isKindOfClass:[NSNull class]]) {
         dData = [[dataType alloc] init];
     }
     

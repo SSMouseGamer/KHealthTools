@@ -74,7 +74,7 @@
             return;
         }
         //处理数据
-        [KHServicesResolve resolveWithDataType:dataType Data:data Error:error CompleteBlock:completeBlock];
+        [KHServicesResolve resolveWithDataType:dataType Task:task Data:data Error:error CompleteBlock:completeBlock];
     }];
     
     //5.fire
