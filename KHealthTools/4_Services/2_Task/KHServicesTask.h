@@ -33,7 +33,7 @@
 ///访问成功的标志，默认值 @“0”
 @property (nonatomic,   copy) NSString *successDefault;
 
-///json、formdata或其他
+///json、formdata或其他，默认json
 @property (nonatomic, assign) KHServiceContentType contentType;
 
 ///访问参数 - 默认为@{}

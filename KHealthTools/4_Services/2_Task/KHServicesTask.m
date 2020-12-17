@@ -76,9 +76,10 @@
     //2.生成request
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     request.timeoutInterval = MAX(5, self.timeOutInterval);
- 
+    
+    
     //3.确定接口地址
-    NSString *urlStr = [doMain stringByAppendingString:self.path];
+    NSString *urlStr = [self.path hasPrefix:@"https://"] || [self.path hasPrefix:@"http://"] ? self.path : [doMain stringByAppendingString:self.path];
     
     //4.设置method
     [request setHTTPMethod:self.method];
