@@ -10,6 +10,24 @@
 
 @implementation KHTools (KHTsCategory)
 
+///获取指定的Bundle
++ (NSBundle *)kh_getBundleWithClassName:(NSString *)className Resource:(NSString *)resource {
+    return [NSBundle bundleWithPath:[[NSBundle bundleForClass:NSClassFromString(className)] pathForResource:resource ofType:@"bundle"]];
+}
+
+///在Bundle中获取图片
++ (UIImage *)kh_getImageWithBundle:(NSBundle *)bundle ImageName:(NSString *)imageName {
+    if (imageName == nil || [imageName isEqualToString:@""]) {
+        return nil;
+    }
+    
+    UIImage *image = [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
+    if (image == nil) {
+        image = [UIImage imageNamed:imageName];
+    }
+    return image;
+}
+
 ///获取KHealthTools这个Bundle的图片
 + (UIImage *)kh_getToolsBundleImage:(NSString *)imageName {
     static NSBundle *bundle;
